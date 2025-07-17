@@ -59,6 +59,11 @@ document.getElementById('clear-button').onclick = function() {
   }
 }
 
+$('#nickname-modal').on('shown.bs.modal', function () {
+    // Focus on nickname input when modal is shown
+    $('#nickname-input').focus();
+});
+
 // 이론적 최적 경로 보여주기 버튼
 document.getElementById('best-button').onclick = function () {
     showBestCircle();
@@ -540,7 +545,6 @@ class CircleDrawer {
                     $('#modal-record-text').text(`기록: ${finalTime.toFixed(2)}초`);
                     $('#nickname-input').val(''); // Clear input field
                     $('#nickname-modal').modal('show');
-                    $('#nickname-input').focus();
                     finishSimulation();
                 }, 100);
             } else {
