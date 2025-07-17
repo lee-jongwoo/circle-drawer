@@ -540,6 +540,7 @@ class CircleDrawer {
                     $('#modal-record-text').text(`기록: ${finalTime.toFixed(2)}초`);
                     $('#nickname-input').val(''); // Clear input field
                     $('#nickname-modal').modal('show');
+                    $('#nickname-input').focus();
                     finishSimulation();
                 }, 100);
             } else {
